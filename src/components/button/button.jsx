@@ -8,7 +8,13 @@ export default function Button(props) {
  }
     return (
 //    TouchableOpacity clicavel 
-   <TouchableOpacity onPress={Click} style={styles.btn} >
+   <TouchableOpacity onPress={Click} 
+   
+   style={[styles.btn,
+      props.theme == "danger" ? styles.danger : styles.primary]}
+   
+   >
+  
   <Text style={styles.text}>
       {props.text}
     </Text>
