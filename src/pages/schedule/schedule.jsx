@@ -7,11 +7,18 @@ import { Picker } from "@react-native-picker/picker";
 import Button from "../../components/button/button";
 LocaleConfig.locales["pt-br"] = ptBR;
 LocaleConfig.defaultLocale = "pt-br";
-export default function Schedule() {
+export default function Schedule(props) {
+  const id_doctor=props.route.params.id_doctor;
+  const id_service=props.route.params.id_service;
   // dia selecionado
   // slice numero de caracteres
   const [selected, setSelected] = useState(new Date().toISOString().slice(0,10));
   const [selectedHour, setSelectedHour] = useState("");
+
+function ClickReserva(){
+  console.log(id_doctor,id_service, selected,selectedHour);
+  
+}
 
   return (
     <View style={styles.container}>
@@ -54,7 +61,9 @@ label="10:00" value={"10:00"}
 </View>
 </View>
 <View>
-  <Button text="Agendar"/>
+  <Button text="Agendar"
+  onPress={ClickReserva}
+  />
 </View>
     </View>
   );

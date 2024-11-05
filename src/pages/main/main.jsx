@@ -1,5 +1,4 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
 import { Image } from "react-native";
 import Home from "../home/home";
 import Calendario from "../calendario/calendario";
@@ -10,7 +9,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Main() {
   return (
-    <NavigationContainer>
+
       <Tab.Navigator>
         <Tab.Screen
           name="Home"
@@ -99,6 +98,6 @@ export default function Main() {
           }}
         />
       </Tab.Navigator>
-    </NavigationContainer>
+  
   );
 }

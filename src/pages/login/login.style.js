@@ -8,7 +8,7 @@ export const styles={
         backgroundColor:color.branco,
         flex:1,
         padding:50,
-        marginTop:50,
+        // marginTop:50,
          justifyContent: "space-between"
         
     },
