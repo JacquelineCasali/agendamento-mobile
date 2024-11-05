@@ -33,7 +33,7 @@ React-Native.js
 ## Para Clonar o projeto
 https://github.com/JacquelineCasali/agendamento-mobile.git
 
-
+# 📁 Acessar a aplicação
 ## Instalação e Rodar o Projeto
 
 ## FRONTEND
@@ -44,7 +44,7 @@ https://github.com/JacquelineCasali/agendamento-mobile.git
 
 
 
-# 📁 Acessar a aplicação
+
 
 
 <!-- ## 👨🏻‍💻 Autenticação

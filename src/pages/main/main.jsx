@@ -9,95 +9,95 @@ const Tab = createBottomTabNavigator();
 
 export default function Main() {
   return (
+    <Tab.Navigator>
+      <Tab.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerTitleAlign: "center",
 
-      <Tab.Navigator>
-        <Tab.Screen
-          name="Home"
-          component={Home}
-          options={{
-            headerTitleAlign: "center",
+          headerTitle: () => {
+            return (
+              <Image
+                source={icon.logo}
+                style={{ width: 125, height: 29, marginTop: 25 }}
+              />
+            );
+          },
+          // remover testo
+          tabBarShowLabel: false,
 
-            headerTitle: () => {
-              return (
-                <Image
-                  source={icon.logo}
-                  style={{ width: 125, height: 29, marginTop: 25 }}
-                />
-              );
-            },
-            // remover testo
-            tabBarShowLabel: false,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.home}
+                style={{
+                  width: 35,
+                  height: 35,
 
-            tabBarIcon: ({focused}) => {
-              return (
-                <Image source={icon.home} style={{ width: 35, height: 35,
-                  
-                  opacity: focused? 0.5 :1 }} />
-              );
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Calendario"
-          component={Calendario}
-          options={{
-            headerTitleAlign: "center",
+                  opacity: focused ? 0.5 : 1,
+                }}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Calendario"
+        component={Calendario}
+        options={{
+          headerTitleAlign: "center",
 
-            headerTitle: () => {
-              return (
-                <Image
-                  source={icon.logo}
-                  style={{ width: 125, height: 29, marginTop: 25 }}
-                />
-              );
-            },
-            // remover testo
-            tabBarShowLabel: false,
+          headerTitle: () => {
+            return (
+              <Image
+                source={icon.logo}
+                style={{ width: 125, height: 29, marginTop: 25 }}
+              />
+            );
+          },
+          // remover testo
+          tabBarShowLabel: false,
+          //recarregar pagina
+          unmountOnBlur: true,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.calendar}
+                style={{ width: 35, height: 35, opacity: focused ? 0.5 : 1 }}
+              />
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Perfil"
+        component={Perfil}
+        options={{
+          headerTitleAlign: "center",
 
-            tabBarIcon: ({focused}) => {
-              return (
-                <Image
-                  source={icon.calendar}
-                  style={{ width: 35, height: 35,
-                    opacity: focused? 0.5 :1 
-
-
-                  }}
-                />
-              );
-            },
-          }}
-        />
-        <Tab.Screen
-          name="Perfil"
-          component={Perfil}
-          options={{
-            headerTitleAlign: "center",
-
-            headerTitle: () => {
-              return (
-                <Image
-                  source={icon.logo}
-                  style={{ width: 125, height: 29, marginTop: 25 }}
-                />
-              );
-            },
-            // remover testo
-            tabBarShowLabel: false,
-
-            tabBarIcon: ({focused}) => {
-              return (
-                <Image
-                  source={icon.profile}
-                  style={{ width: 35, height: 35 ,
-                    opacity: focused? 0.5 :1 
-                  }}
-                />
-              );
-            },
-          }}
-        />
-      </Tab.Navigator>
-  
+          headerTitle: () => {
+            return (
+              <Image
+                source={icon.logo}
+                style={{ width: 125, height: 29, marginTop: 25 }}
+              />
+            );
+          },
+          // remover testo
+          tabBarShowLabel: false,
+          //recarregar pagina
+          unmountOnBlur: true,
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Image
+                source={icon.profile}
+                style={{ width: 35, height: 35, opacity: focused ? 0.5 : 1 }}
+              />
+            );
+          },
+        }}
+      />
+    </Tab.Navigator>
   );
 }

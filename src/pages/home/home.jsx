@@ -1,9 +1,13 @@
 
-import { FlatList, Text, View } from 'react-native'
+import { Alert, FlatList, Text, View } from 'react-native'
 import { styles } from "./home.style";
-import { doctors } from '../../constants/data';
+
 import Doctor from '../../components/doctor/doctor';
+import { useEffect, useState } from 'react';
+import api from '../../constants/api';
 export default function Home(props) {
+
+  const [doctors, setDoctors]=useState([]);
  function ClickDoctor (id_doctor,name,specialty,icon){
  // console.log(id_doctor,name,specialty,icon);
   //abrindo a tela de serviços
@@ -11,7 +15,26 @@ export default function Home(props) {
   id_doctor,name,specialty,icon
  })
  }
- 
+ async function LoadDoctors(){
+  try {
+    const response =await api.get("/medicos");
+    if(response.data){
+      setDoctors(response.data);
+       }
+  } catch (error) {
+    if(error.response?.data.error){
+      Alert.alert(error.response.data.error)
+      
+    }else{
+      Alert.alert("Ocorreu um error. Tente novamente mais tarde")
+    }
+   
+  }
+   }
+useEffect(()=>{
+  LoadDoctors();
+},[])
+
   return (
     <View style={styles.container}>
    

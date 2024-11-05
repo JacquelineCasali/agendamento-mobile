@@ -5,6 +5,8 @@ import Button from '../button/button'
 import icon from '../../constants/icon'
 
 export default function Agendamento(props) {
+  
+  const dt= new Date(props.booking_date  + "T"+ props.booking_hour );
   return (
 
     
@@ -25,7 +27,7 @@ style={styles.icon}
 source={icon.calendar}/>
 <Text
 style={styles.bookingDate}
->{props.booking_date}</Text>
+>{dt.toLocaleDateString()}</Text>
 
 </View>
 <View style={styles.booking}>
@@ -34,12 +36,16 @@ style={styles.icon}
 source={icon.clock}/>
 <Text
 style={styles.bookingHour}
->{props.booking_hour}</Text>
+>{props.booking_hour}h</Text>
 
 </View>
 </View>
 <View style={styles.containerButton}>
-<Button text="Cancelar Agendamento" theme="danger" />
+<Button text="Cancelar Agendamento" 
+
+theme="danger"
+onPress={()=>props.onPress(props.id_appointment)}
+/>
 </View>
 </View>
 
