@@ -7,35 +7,13 @@ O aplicativo ou sistema web deve possuir funcionalidades que permitam o cadastro
 
 ## Imagem do Projeto
 
- <p align="center">
-  <img src="./assets/account.jsx.png" width="600px">
-</p>
-
- <p align="center">
-  <img src="./assets/login.jsx.png" width="600px">
-</p>
+![account jsx](https://github.com/user-attachments/assets/55093417-fc50-4ce3-b425-5e9621d8d2c9) ![login jsx](https://github.com/user-attachments/assets/191c2aa9-61fb-4786-ade8-e7b4ac29d6c3)
 
 
-
-<div>
- <p display="grid">
-  <img src="./assets/main.jsx (tabcalendar).png" width="600px">
-</p>
- <p >
-  <img src="./assets/services.jsx.png" width="600px">
-</p>
- <p >
-  <img src="./assets/main.jsx (tabhome).png" width="600px">
-</p> 
-<p >
-  <img src="./assets/main.jsx (tabprofile).png" width="600px">
-</p>
- <p>
-  <img src="./assets/schedule.jsx.png" width="600px">
-</p>
+![main jsx (tabhome)](https://github.com/user-attachments/assets/6ef4ded1-d2f3-49c1-bcc1-c4d7826033b3) ![main jsx (tabcalendar)](https://github.com/user-attachments/assets/e624bde6-9018-4894-8823-193d1111548d) ![main jsx (tabprofile)](https://github.com/user-attachments/assets/0e36ae87-4d79-489a-a7cf-2a7d4d445fab)
 
 
-</div>
+![services jsx](https://github.com/user-attachments/assets/d20f8123-0bb2-4103-9bdb-6f0d7f5ad9a2) ![schedule jsx](https://github.com/user-attachments/assets/999524a3-656e-4155-9f52-ac5790b40eff)
 
 
 
@@ -53,7 +31,7 @@ O aplicativo ou sistema web deve possuir funcionalidades que permitam o cadastro
 React-Native.js
 
 ## Para Clonar o projeto
-https://github.com/JacquelineCasali/Api-Sistema-Medico-Java.git
+https://github.com/JacquelineCasali/agendamento-mobile.git
 
 
 ## Instalação e Rodar o Projeto
